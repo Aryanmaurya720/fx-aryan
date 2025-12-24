@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aryan Maurya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+body{background:#000;color:#fff;overflow:hidden}
+
+.video-bg{
+    position:fixed;top:0;left:0;width:100%;height:100%;
+    object-fit:cover;z-index:-2;filter:blur(6px) brightness(.55);
+}
+.overlay{
+    position:fixed;top:0;left:0;width:100%;height:100%;
+    background:rgba(0,0,0,.55);z-index:-1;
+}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem}
+
+.card{
+    background:rgba(0,0,0,.65);
+    padding:2.5rem;border-radius:22px;text-align:center;
+    max-width:420px;width:100%;
+    backdrop-filter:blur(12px);
+    animation:fadeScale 1.2s ease;
+}
+
+@keyframes fadeScale{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+
+.card h1{
+    font-size:2.4rem;margin-bottom:.5rem;
+    background:linear-gradient(135deg,#26a69a,#00e5ff);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.subtitle{color:#b8b8d1;margin-bottom:1.2rem}
+
+.profile-img-wrap{
+    margin:1.2rem auto;width:150px;height:150px;border-radius:50%;
+    overflow:hidden;border:4px solid #26a69a;
+    box-shadow:0 0 30px rgba(38,166,154,.7);
+    animation:floatPic 3s ease-in-out infinite;
+}
+.profile-img-wrap img{width:100%;height:100%;object-fit:cover}
+@keyframes floatPic{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.icons-title{color:#26a69a;font-size:1rem;margin-top:.8rem}
+
+.icons{
+    display:flex;justify-content:center;gap:1rem;margin-top:.8rem;
+}
+.icons a{
+    width:52px;height:52px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.08);
+    box-shadow:0 0 20px rgba(38,166,154,.4);
+    animation:iconPulse 2s infinite;transition:.3s;
+}
+.icons a:hover{transform:scale(1.12);background:#26a69a}
+.icons img{width:32px;height:32px}
+
+@keyframes iconPulse{
+    0%{box-shadow:0 0 10px rgba(38,166,154,.3)}
+    50%{box-shadow:0 0 25px rgba(38,166,154,.8)}
+    100%{box-shadow:0 0 10px rgba(38,166,154,.3)}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .card{padding:1.8rem}
+    .card h1{font-size:2rem}
+    .profile-img-wrap{width:120px;height:120px}
+    .icons a{width:46px;height:46px}
+    .icons img{width:28px;height:28px}
+}
+</style>
+</head>
+
+<body>
+
+<video class="video-bg" autoplay muted loop>
+    <source src="bg.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<section class="hero">
+<div class="card">
+    <h1>Aryan Maurya</h1>
+    <p class="subtitle">Real Market Results – No Fake Claims</p>
+
+    <div class="profile-img-wrap">
+        <img src="profile.jpg">
+    </div>
+
+    <div class="icons-title">You Can See My Profile</div>
+
+    <div class="icons">
+        <a href="https://t.me/YOUR_CHANNEL" target="_blank"><img src="telegram.png"></a>
+        <a href="https://instagram.com/YOUR_ID" target="_blank"><img src="instagram.png"></a>
+        <a href="https://x.com/YOUR_ID" target="_blank"><img src="twitter.png"></a>
+        <a href="https://discord.gg/YOUR_SERVER" target="_blank"><img src="discord.png"></a>
+    </div>
+</div>
+</section>
+
+</body>
+</html>
